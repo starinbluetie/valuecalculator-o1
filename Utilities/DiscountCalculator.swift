@@ -1,10 +1,15 @@
-
 import Foundation
 
 class DiscountCalculator {
     // ...existing code...
     func applyDiscount(price: Double, discountType: String) -> Double {
-        // Example stub
-        return price
+        switch discountType.lowercased() {
+        case "half":
+            return price * 0.5
+        case "none":
+            return price
+        default:
+            return price * 0.9
+        }
     }
 }

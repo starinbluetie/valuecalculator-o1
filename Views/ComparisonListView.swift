@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct ComparisonListView: View {
@@ -9,6 +8,7 @@ struct ComparisonListView: View {
             VStack(alignment: .leading) {
                 Text(result.product.name)
                 Text("Unit Price: \(result.unitPrice)")
+                Text("Discounted Price: \(result.product.price)")
             }
         }
     }
