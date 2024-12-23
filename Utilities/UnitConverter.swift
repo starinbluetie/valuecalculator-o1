@@ -2,9 +2,24 @@ import Foundation
 
 class UnitConverter {
     func convert(value: Double, fromUnit: String, toUnit: String) -> Double {
-        if fromUnit.lowercased() != toUnit.lowercased() {
-            return value * 1.5  // Sample conversion logic
+        let from = fromUnit.lowercased()
+        let to = toUnit.lowercased()
+
+        if from == to {
+            return value
         }
-        return value
+
+        switch (from, to) {
+        case ("kg", "lb"):
+            return value * 2.20462
+        case ("lb", "kg"):
+            return value * 0.453592
+        case ("oz", "g"):
+            return value * 28.3495
+        case ("g", "oz"):
+            return value * 0.035274
+        default:
+            return value
+        }
     }
 }

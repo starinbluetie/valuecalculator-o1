@@ -1,7 +1,6 @@
 import Foundation
 
 class DiscountCalculator {
-    // ...existing code...
     func applyDiscount(price: Double, discountType: String) -> Double {
         switch discountType.lowercased() {
         case "half":

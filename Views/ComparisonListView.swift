@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct ComparisonListView: View {
-    let comparisonResults: [ComparisonResult] = []
-    
+    let comparisonResults: [ComparisonResult]
+
     var body: some View {
         List(comparisonResults, id: \.product.name) { result in
             VStack(alignment: .leading) {
